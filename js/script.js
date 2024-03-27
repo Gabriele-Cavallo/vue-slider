@@ -72,6 +72,7 @@ createApp({
         };
     },
     methods: {
+        // funzione per visualizzare l'immagine successiva
         nextImage: function(){
             if (this.activeImage < this.slides.length -1){
                 this.activeImage++;
@@ -79,6 +80,7 @@ createApp({
                 this.activeImage = 0;
             }
         },
+        // funzione per visualizzare l'immagine precedente
         previousImage: function(){
             if (this.activeImage > 0){
                 this.activeImage--;
@@ -86,8 +88,14 @@ createApp({
                 this.activeImage = this.slides.length -1;
             }
         },
+        // funzione per scegliere quale immagine deve diventare la principale
         selectedImage: function(index){
             this.activeImage = index;
         }
+    },
+    mounted() {
+        setInterval(
+            this.nextImage
+        ,3000)
     }
 }).mount('#app');
