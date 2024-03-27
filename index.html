@@ -32,8 +32,8 @@
                 <div class="thumbs">
                     <div @click="previousImage" class="prev"></div>
                     <div @click="nextImage" class="next"></div>
-                    <div v-for ="thumbnailImage in slides" class="thumb active">
-                        <img :src="thumbnailImage.image" :alt="thumbnailImage.title" />
+                    <div v-for ="thumbnailImage, index in slides" class="thumb active">
+                        <img @click="selectedImage(index)" :src="thumbnailImage.image" :alt="thumbnailImage.title" />
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />

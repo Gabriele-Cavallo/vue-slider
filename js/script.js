@@ -85,6 +85,9 @@ createApp({
             }else{
                 this.activeImage = this.slides.length -1;
             }
+        },
+        selectedImage: function(index){
+            this.activeImage = index;
         }
     }
 }).mount('#app');
