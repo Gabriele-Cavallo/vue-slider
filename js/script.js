@@ -93,14 +93,17 @@ createApp({
         selectedImage: function(index){
             this.activeImage = index;
         },
+        // funzione per far partire lo scorrimento automatico delle immagini
         autoplay(){
             this.startAutoplay = setInterval(this.nextImage,3000)
         },
+        // funzione per fermare lo scorrimento automatico delle immagini
         stopAutoplay(){
             clearInterval(this.startAutoplay);
         }
     },
     mounted() {
+        // funzione per far scorrere le immagini automaticamente ogni 3 sec al caricamento della pagina
         this.autoplay();
     }
 }).mount('#app');
