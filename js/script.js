@@ -75,5 +75,12 @@ createApp({
                 this.activeImage = 0;
             }
         },
+        previousImage: function(){
+            if (this.activeImage > 0){
+                this.activeImage--;
+            }else{
+                this.activeImage = this.slides.length -1;
+            }
+        }
     }
 }).mount('#app');

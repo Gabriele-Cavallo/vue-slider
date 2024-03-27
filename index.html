@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
+                    <div @click="previousImage" class="prev"></div>
                     <div @click="nextImage" class="next"></div>
                     <div v-for ="thumbnailImage in slides" class="thumb active">
                         <img :src="thumbnailImage.image" alt="Svezia" />
